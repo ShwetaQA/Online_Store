@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Selenium\Workspace\Online_Store\testng.xml</span>
+                    <span>C:\Java_Workspace\Online_Store\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">6 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -113,18 +113,18 @@
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="automationFramework.Apache_POI_TC" hash-for-method="testParameterWithXML">testParameterWithXML</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -147,32 +147,18 @@
                   <a name="testParameterWithXML">
                   </a> <!-- testParameterWithXML -->
                   <span class="method-name">testParameterWithXML</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression .//*[@id=&apos;account_logout&apos;]/a because of the following error:
-TypeError: Failed to execute &apos;createNSResolver&apos; on &apos;Document&apos;: parameter 1 is not of type &apos;Node&apos;.
-  (Session info: chrome=53.0.2785.143)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 8.22 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;unknown&apos;, revision: &apos;3169782&apos;, time: &apos;2016-09-29 10:24:50 -0700&apos;
-System info: host: &apos;DELLDQRHWX1&apos;, ip: &apos;192.168.10.215&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\skumari\AppData\Local\Temp\scoped_dir6860_15829}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=53.0.2785.143, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e0804f5f73323deca786a0683f41bfff
-*** Element info: {Using=xpath, value=.//*[@id=&apos;account_logout&apos;]/a}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:636)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:474)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at pageObjects.Home_Page.lnk_LogOut(Home_Page.java:27)
-	at automationFramework.Apache_POI_TC.testParameterWithXML(Apache_POI_TC.java:106)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames
+                  <div class="stack-trace">java.io.FileNotFoundException: C:\Selenium\Workspace\Online_Store\src\testData\TestData.xlsx (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:93)
+	at utility.ExcelUtils.setExcelFile(ExcelUtils.java:25)
+	at automationFramework.Apache_POI_TC.testParameterWithXML(Apache_POI_TC.java:92)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -181,33 +167,26 @@ Session ID: e0804f5f73323deca786a0683f41bfff
                   <a name="testParameterWithXML">
                   </a> <!-- testParameterWithXML -->
                   <span class="method-name">testParameterWithXML</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Cannot click on element (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 502 milliseconds
-Build info: version: &apos;unknown&apos;, revision: &apos;3169782&apos;, time: &apos;2016-09-29 10:24:50 -0700&apos;
-System info: host: &apos;DELLDQRHWX1&apos;, ip: &apos;192.168.10.215&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:12492/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
-Session ID: d91f590c-cc8e-4cde-bc9a-9e3bcf98a034
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:636)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:284)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at appModules.SignIn_Action.Log_Out(SignIn_Action.java:28)
-	at automationFramework.Apache_POI_TC.testParameterWithXML(Apache_POI_TC.java:110)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames
+                  <div class="stack-trace">java.io.FileNotFoundException: C:\Selenium\Workspace\Online_Store\src\testData\TestData.xlsx (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
+	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:93)
+	at utility.ExcelUtils.setExcelFile(ExcelUtils.java:25)
+	at automationFramework.Apache_POI_TC.testParameterWithXML(Apache_POI_TC.java:92)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">automationFramework.Apache_POI_TC</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -219,11 +198,11 @@ Session ID: d91f590c-cc8e-4cde-bc9a-9e3bcf98a034
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Selenium\Workspace\Online_Store\testng.xml</span>
+            <span class="header-content">C:\Java_Workspace\Online_Store\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -248,6 +227,45 @@ Session ID: d91f590c-cc8e-4cde-bc9a-9e3bcf98a034
       &lt;class name=&quot;automationFramework.Apache_POI_TC&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- IETest --&gt;
+  &lt;test name=&quot;ChromeTest(failed)&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;automationFramework.Apache_POI_TC&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;testParameterWithXML&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- automationFramework.Apache_POI_TC --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ChromeTest(failed) --&gt;
+  &lt;test name=&quot;FireFoxTest(failed)&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;automationFramework.Apache_POI_TC&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;testParameterWithXML&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- automationFramework.Apache_POI_TC --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FireFoxTest(failed) --&gt;
+  &lt;test name=&quot;IETest(failed)&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;automationFramework.Apache_POI_TC&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;testParameterWithXML&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- automationFramework.Apache_POI_TC --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- IETest(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -266,6 +284,15 @@ Session ID: d91f590c-cc8e-4cde-bc9a-9e3bcf98a034
               </li>
               <li>
                 <span class="test-name">IETest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ChromeTest(failed) (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FireFoxTest(failed) (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">IETest(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -295,20 +322,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testParameterWithXML')
 data.setCell(0, 2, 'automationFramework.Apache_POI_TC')
-data.setCell(0, 3, 29151);
+data.setCell(0, 3, 13);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testParameterWithXML')
 data.setCell(1, 2, 'automationFramework.Apache_POI_TC')
-data.setCell(1, 3, 26392);
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testParameterWithXML')
 data.setCell(2, 2, 'automationFramework.Apache_POI_TC')
-data.setCell(2, 3, 21998);
+data.setCell(2, 3, 2);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 17 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -340,28 +367,30 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp(ie)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">4 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">1 ms</span>
+                <span class="method-start">5 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testParameterWithXML</span>
-                <span class="method-start">1262 ms</span>
+                <span class="method-start">2497 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testParameterWithXML</span>
-                <span class="method-start">12425 ms</span>
+                <span class="method-start">16669 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testParameterWithXML</span>
-                <span class="method-start">14052 ms</span>
+                <span class="method-start">49862 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
